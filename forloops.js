@@ -28,3 +28,25 @@ for (var i = 0; i <= 10; i++) {
 
 // Check the results of assignGrade function from the conditionals exercise for every value from 60 to 100 - so your log should show "For 89, you got a B. For 90, you got an A.", etc.
 
+function assignGrade(num) {
+  if (num >= 80) {
+    return 'A';
+  }
+  else if (num >= 70) {
+    return 'B';
+  }
+  else if (num >= 60) {
+    return 'C';
+  }
+  else if (num >= 50) {
+    return 'D';
+  }
+  else {
+    return 'F'
+  }
+}
+
+for (var i = 60; i <= 100; i++){
+	letter = assignGrade(i);
+	console.log('For ' + i + ' will get you ' + ((letter == 'A' || letter == 'F') ? 'an' : 'a') + ' ' + letter);
+}
